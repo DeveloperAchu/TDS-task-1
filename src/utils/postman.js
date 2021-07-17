@@ -1,6 +1,11 @@
 const request = require("request");
 
-const results = () => {
+/*
+    This function returns a promise after invoking the endpoint. If there is an error,
+    the promise rejects with an error message. If the request is successful, the promise
+    resolve with the response body
+*/
+const postman = () => {
     const url = "https://postman-echo.com/get?foo1=bar1&foo2=bar2";
     return new Promise(
         (resolve, reject) => {
@@ -17,7 +22,10 @@ const results = () => {
                 }
             );
         }
-    );
+    ).catch((e) => {
+        return e;
+    });
 };
 
-module.exports = results;
+// Export the function to use in other files
+module.exports = postman;

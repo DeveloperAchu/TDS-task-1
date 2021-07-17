@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="table">
+            <div class="item">
+                <p>URL</p>
+                <table>
+                    <tr>
+                        <th>{{url}}</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="item">
+                <p>Arguments</p>
+                <table>
+                    <tr>
+                        <th>Tag Name</th>
+                        <th>Value</th>
+                    </tr>
+                    {{!-- This loop allows us to iterate through the json object --}}
+                    {{#each args}}
+                    <tr>
+                        <td>{{@key}}</td>
+                        <td>{{this}}</td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+
+            <div class="item">
+                <p>Headers</p>
+                <table>
+                    <tr>
+                        <th>Tag Name</th>
+                        <th>Value</th>
+                    </tr>
+                    {{#each headers}}
+                    <tr>
+                        <td>{{@key}}</td>
+                        <td>{{this}}</td>
+                    </tr>
+                    {{/each}}
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

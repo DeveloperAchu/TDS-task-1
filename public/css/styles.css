@@ -70,3 +70,33 @@ body {
 .inner .second_link {
     margin-left: 20px;
 }
+
+.table {
+    display: inline;
+}
+
+.table p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #174881;
+}
+
+table {
+    border-collapse: collapse;
+    display: inline;
+}
+
+th, td{
+    border: 1px solid #aeaeae;
+    padding: 8px 20px 8px 20px;
+    text-align: center;
+}
+
+th {
+    background-color: #0085FF;
+    color: #ffffff;
+}
+
+.item {
+    margin-top: 60px;
+}

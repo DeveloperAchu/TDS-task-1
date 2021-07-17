@@ -4,7 +4,6 @@ const express = require("express");
 const hbs = require("hbs");
 
 const postman = require("./utils/postman");
-const { response } = require("express");
 
 /*
 Setup the app using express and initialize the port to use. If the port is
